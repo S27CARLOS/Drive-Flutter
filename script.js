@@ -110,5 +110,5 @@ function pagar(metodo) {
   }
 }
 
-// Inicializa o app
+
 carregarTelaLogin();
