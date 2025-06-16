@@ -274,16 +274,16 @@
       driver.style.display = 'block';
       driver.style.animation = 'moveDriver 8s linear infinite';
       
-      // Mostrar botão "Cheguei ao destino"
+    
       document.getElementById('btn-cheguei').style.display = 'block';
-      // Esconder botão "Chamar Motorista"
+      
       document.getElementById('btn-chamar').style.display = 'none';
-      // Esconder opções de tipo e destino
+      
       document.querySelectorAll('.options button').forEach(btn => btn.disabled = true);
       document.getElementById('destino').disabled = true;
-      // Esconder botões de pagamento
+      
       esconderPagamentos();
-      // Limpar mensagem de pagamento
+      
       document.getElementById('msg-pagamento').style.display = 'none';
       document.getElementById('msg-pagamento').innerText = '';
     }
@@ -299,14 +299,14 @@
       const destino = document.getElementById('destino').value;
       document.getElementById('mapa-overlay').innerText = `Você chegou em ${destino}!`;
       
-      // Parar animação do motorista
+      
       const driver = document.getElementById('driver');
       driver.style.animation = 'none';
       driver.style.display = 'none';
       
-      // Esconder botão "Cheguei ao destino"
+  
       document.getElementById('btn-cheguei').style.display = 'none';
-      // Mostrar botões de pagamento
+      
       mostrarPagamentos();
     }
 
@@ -320,10 +320,9 @@
       msg.style.whiteSpace = 'pre-line';
       msg.style.display = 'block';
 
-      // Esconder botões de pagamento após o pagamento
       esconderPagamentos();
 
-      // Resetar o app após 3 segundos
+    
       setTimeout(resetarApp, 3000);
     }
 
@@ -346,13 +345,13 @@
       document.getElementById('valorTotal').innerText = 'R$0,00';
       document.getElementById('mapa-overlay').innerText = 'Digite seu destino e selecione um tipo de corrida';
 
-      // Mostrar botão "Chamar Motorista"
+      
       document.getElementById('btn-chamar').style.display = 'block';
-      // Esconder botão "Cheguei ao destino"
+     
       document.getElementById('btn-cheguei').style.display = 'none';
-      // Esconder botões de pagamento
+    
       esconderPagamentos();
-      // Habilitar opções de tipo e destino
+    
       document.querySelectorAll('.options button').forEach(btn => {
         btn.disabled = false;
         btn.classList.remove('active');
@@ -360,7 +359,7 @@
       document.getElementById('destino').disabled = false;
       document.getElementById('destino').value = '';
 
-      // Limpar mensagem de pagamento
+      
       const msg = document.getElementById('msg-pagamento');
       msg.style.display = 'none';
       msg.innerText = '';
