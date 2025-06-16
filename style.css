@@ -1,0 +1,172 @@
+/* Estilos para o mapa e elementos visuais */
+.mapa-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  margin: 10px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.mapa {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  pointer-events: none; /* Permite interação com os elementos overlay */
+}
+
+.mapa-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.marcador {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.marcador.origem {
+  background-color: #4285F4;
+  top: 70%;
+  left: 30%;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.marcador.destino {
+  background-color: #EA4335;
+  top: 30%;
+  left: 70%;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.rota-animada {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  width: 40%;
+  height: 3px;
+  background-color: #4285F4;
+  transform-origin: left center;
+  transform: rotate(-30deg) translateY(-50%);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.carro-marcador {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  transition: left 0.1s linear, transform 0.2s ease;
+  z-index: 10;
+}
+
+.carro {
+  width: 20px;
+  height: 10px;
+  background-color: #34A853;
+  border-radius: 3px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.carro:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 4px;
+  background-color: #555;
+  border-radius: 2px;
+  top: -2px;
+  left: 2px;
+}
+
+/* Estilos gerais para o app */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.tela-login, .tela-solicitacao, .tela-andamento, .tela-final {
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3367D6;
+}
+
+button.pix {
+  background-color: #34A853;
+}
+
+button.pix:hover {
+  background-color: #2D8E44;
+}
+
+button.cartao {
+  background-color: #EA4335;
+}
+
+button.cartao:hover {
+  background-color: #D33426;
+}
+
+.info {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.mensagem {
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background: #f0f0f0;
+  color: #333;
+}
+
+h1, h2 {
+  color: #333;
+}
