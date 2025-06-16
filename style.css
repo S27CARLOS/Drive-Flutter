@@ -1,4 +1,4 @@
-/* Estilos para o mapa e elementos visuais */
+
 .mapa-container {
   position: relative;
   width: 100%;
@@ -89,7 +89,7 @@
   left: 2px;
 }
 
-/* Estilos gerais para o app */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
